@@ -48,7 +48,6 @@ for i in range(8):
 x_train = x_train.astype(float) / 255.
 x_test  = x_test.astype(float) / 255.
 
-"""https://keras.io/api/layers/"""
 
 # define model
 model = keras.Sequential()
@@ -58,12 +57,6 @@ model.add(keras.layers.Dense(units=num_classes, activation='softmax'))
 
 model.summary()
 
-"""https://keras.io/api/losses/ 
-
-https://keras.io/api/optimizers/
-
-https://keras.io/api/metrics/
-"""
 
 # compile model
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])

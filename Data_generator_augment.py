@@ -49,3 +49,9 @@ class DataGeneratorAugment(keras.utils.Sequence):
         self.indexes = np.arange(len(self.data))
         if self.shuffle == True:
             np.random.shuffle(self.indexes)
+            
+            
+            
+   ###############################################################3
+train_generator = DataGeneratorAugment(train_list, mode='train')
+valid_generator = DataGeneratorAugment(test_list, shuffle=False)
